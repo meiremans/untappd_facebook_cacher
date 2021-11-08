@@ -1,0 +1,13 @@
+version: "2"
+services:
+  untappd:
+    container_name: untappd
+    build: .
+    restart: always
+    expose:
+      - 3000
+
+networks:
+  default:
+    external:
+      name: nginx-proxy-manager_default
